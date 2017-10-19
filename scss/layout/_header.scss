@@ -1,0 +1,293 @@
+﻿.page-navigation {
+    display: block;
+    
+    &__address {
+        display: none; 
+    }
+    
+    &__home-link {
+        display: none; 
+    }
+    
+    &__item {
+        color: $color-white-1;
+        display: block;
+        opacity: 0;
+        font-size: 18px;
+        text-decoration: none;
+        transition: opacity .4s linear, border-color .4s linear;
+        visibility: hidden; 
+    }
+    
+    &__languages {
+        position: fixed;
+        top: 28px; 
+    }
+
+    &__language {
+        color: #9E9E9E;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color .3s;
+        
+        :hover {
+            color: $color-white-1; 
+        }
+    }
+    
+    &__language + &__language {
+        padding-left: 6px;
+    }
+    
+    &__overlay {
+        height: 100vh;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity .3s;
+        visibility: hidden;
+        width: 100vw;
+        z-index: -1;
+        
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 100; 
+        }
+    }
+}
+
+.page-navigation__hamburger {
+    cursor: pointer;
+    float: right;
+    height: 25px;
+    position: relative;
+    transition: .5s ease-in-out;
+    width: 38px;
+    
+    &-stripe {
+        background: $color-white-1;
+        border-radius: 5px;
+        display: block;
+        height: 5px;
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        width: 100%; 
+        
+        &:nth-child(1) {
+            top: 0px; 
+        }
+        
+        &:nth-child(2), &:nth-child(3) {
+            top: 10px; 
+        }
+        
+        &:nth-child(4) {
+            top: 20px; 
+        }
+    }
+
+    &.is-clicked {
+        top: 20px;
+        right: 40px;
+        position: fixed;
+        z-index: 102; 
+
+        .page-navigation__hamburger-stripe:nth-child(1) {
+            left: 50%;
+            top: 18px;
+            width: 0%; 
+        }
+        
+        .page-navigation__hamburger-stripe:nth-child(2) {
+            transform: rotate(45deg); 
+        }
+        
+        .page-navigation__hamburger-stripe:nth-child(3) {
+            transform: rotate(-45deg); 
+        }
+        
+        .page-navigation__hamburger-stripe:nth-child(4) {
+            left: 50%;
+            top: 18px;
+            width: 0%; 
+        }
+    }
+}
+
+.page-navigation__wrapper {
+    float: right;
+    margin-right: 40px;
+    margin-top: 26px;
+    width: 104px;
+    
+    &.is-expanded {
+        background-color: #212121;
+        box-sizing: border-box;
+        float: none;
+        height: 100vh;
+        left: 0;
+        margin-top: 0;
+        overflow: scroll;
+        padding: 54px 40px 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: 100;
+        
+        .page-navigation {
+            box-sizing: border-box;
+            min-height: 100%; 
+        }
+        
+        .page-navigation__home-link {
+            display: inline-block;
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            z-index: 101; 
+        }
+        
+        .page-navigation__home-link-logo {
+            width: 170px; 
+        }
+        
+        .page-navigation__item {
+            box-sizing: border-box;
+            line-height: 50px;
+            opacity: 1;
+            position: relative;
+            text-align: center;
+            visibility: visible;
+            z-index: 101; 
+        }
+        
+        .page-navigation__languages {
+            display: block;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            position: relative;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 101; 
+        }
+        
+        .page-navigation__address {
+            color: #FAFAFA;
+            display: block;
+            font-size: 14px;
+            padding-top: 20px;
+            position: relative;
+            text-align: center;
+            z-index: 101; 
+        }
+    }
+}
+
+.page-header {
+    display: block;
+
+    &__heading {
+        color: white; 
+    }
+
+    &__home-link {
+        float: left;
+        padding: 12px 0; 
+    }
+
+    &__logo {
+        margin-left: 40px;
+        width: 90px; 
+    
+        &.is-inactive {
+            display: none; 
+        }
+    }
+    
+    &__row {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 76px;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__text {
+        color: white; 
+    }
+}
+
+
+.page-frame {
+    margin: 0 auto;
+    max-width: 1160px;
+    width: 100%; 
+}
+
+@media screen and (min-width: 788px) {
+    
+    .page-navigation {
+        
+        &__wrapper {
+            margin-top: 0px;
+            position: relative;
+            width: 560px;   
+        }
+        
+        .page-navigation__hamburger {
+            display: none; 
+        }
+        
+        .page-navigation__item {
+            border-bottom: 4px solid transparent;
+            box-sizing: border-box;
+            display: block;
+            float: left;
+            height: 91px;
+            line-height: 91px;
+            opacity: 1;
+            visibility: visible;
+            
+            &:hover {
+                border-bottom-color: $color-white-1; 
+            }
+        }
+            
+        .page-navigation__item + .page-navigation__item {
+            margin-left: 20px; 
+        }
+            
+        .page-navigation__languages {
+            position: absolute;
+            right: 0px;
+            top: 33px; 
+        }
+    } 
+
+    .page-header {
+        &__row {
+            height: 91px; 
+        }
+        
+        &__logo {
+            width: 120px; 
+        } 
+    }
+}
+
+@media screen and (max-width: 300px) {
+    
+    .page-header__logo {
+        margin-left: 5px;      
+    }
+    
+    .page-navigation__wrapper {
+        margin-right: 5px; 
+    }
+}

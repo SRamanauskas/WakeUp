@@ -1,0 +1,45 @@
+.main {
+    height: 100vh;
+    background-color: $color-gray-1;
+    position: relative;
+    
+    &-container {
+        max-width: 1160px;
+        margin: auto;
+        padding: 0px 40px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+        
+    &__header {
+        color: $color-white-1;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-transform: uppercase;
+        padding-top: 30px;
+    }
+        
+    &__text {
+        color: $color-white-1;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
+    .main {
+        
+        &-container {
+            padding: 0px 10px;
+        }
+    }
+}

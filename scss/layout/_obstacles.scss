@@ -1,0 +1,65 @@
+.obstacles {
+    background-color: $color-white-2;
+    
+    &-container {
+        max-width: 1160px;
+        margin: auto;
+        padding: 60px 40px;
+        box-sizing: border-box;
+    }
+        
+    &__heading {
+        color: $color-gray-1;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 60px;
+        text-align: center; 
+    }
+        
+    &__list {
+        width: 100%;
+    }
+            
+    &__text {
+        font-size: 18px;
+        text-align: center;
+        display: block;
+        margin-right: 5.85151%;
+        width: 15.3188%;
+        padding-bottom: 0px;
+                
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1088px) {
+    
+    .obstacles {
+
+        &__heading {
+            margin-bottom: 0px;
+        }
+            
+        &__list {
+            display: block;
+        }
+                
+        &__text {
+            width: 100%;
+            margin-right: 0px;
+            margin-top: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
+    .obstacles {
+        
+        &-container{
+            padding: 60px 10px;  
+        }
+    }
+}

@@ -1,0 +1,177 @@
+﻿.main-reservation {
+    background-color: $color-gray-1;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+.main-form {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 640px;
+    
+    
+    &__header {
+        color: $color-white-1;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    &__input-container {
+        margin-top: 2rem;
+        position: relative;
+    }
+    
+    &__input {
+        padding-left: 10px;
+        margin: 0;
+        color: $color-black;
+        font-weight: 500;
+    }
+    
+    &__input-label {
+        padding-left: 10px;
+        color: #999;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        pointer-events: none;
+        font-size: 1.2rem;
+    }
+    
+    .input-container {
+        margin-top: 2rem;
+        position: relative;
+        display: inline-block;
+        width: 46%;
+
+        &:last-child {
+            float: right;
+        }
+    }
+    
+    textarea {
+        height: 200px;
+        
+        ~ label {
+            top: 20px;
+        }
+    }
+}
+
+.writing-container {
+    width: 70%;
+    max-width: 960px;
+    text-align: center;
+    display: inline-block;
+    border-left: 1px solid $color-white-1;
+    font-size: 1rem;
+    
+    &__contacts-form {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 70%;
+        max-width: 440px;
+        margin: auto;
+    }
+    
+    &__header {
+        font-size: 35px;
+    }
+}
+
+
+
+select:focus ~ .focus-label, input:focus ~ .focus-label, textarea:focus ~ .focus-label, select:valid ~ .focus-label, input:valid ~ .focus-label, textarea:valid ~ .focus-label {
+    font-size: 1em;
+    color: $color-white-1;
+    font-weight: 600;
+    top: -1rem;
+    -webkit-transition: all 0.125s ease;
+    transition: all 0.125s ease;
+}
+
+@media screen and (max-width: 1420px) {
+    
+    .main-reservation { 
+        padding-top: 110px;
+        
+        .main-form {
+            position: static;
+            transform: none;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    
+    .writing-container {
+        display: block;
+        width: 100%;
+        border: none;
+        margin: 20px auto 0px;
+        border-top: 1px solid $color-white-1;
+        
+        &__contacts-form {
+            width: 90%;   
+        }
+        
+        &__header {
+            font-size: 30px;
+            margin: 20px 0px;
+            width: 100%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 660px) {
+    
+    .main-reservation {
+        padding-top: 100px;
+        
+        .main-form {
+            width: 70%;
+
+            &__header {
+                margin-bottom: 10px;
+                font-size: 30px;
+            }
+        }
+        
+        textarea {
+            height: 120px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+    .main-reservation {
+        padding-top: 80px;
+        
+        .main-form {
+            width: 90%;
+        }
+        
+        .input-container {
+            width: 100%;
+
+            &:last-child {
+                float:none
+            }
+        }
+        
+        textarea {
+            height: 120px;
+        }
+    }
+}

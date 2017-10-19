@@ -1,0 +1,35 @@
+.system {
+    background-color: $color-white-2;
+    
+    &-container {
+        box-sizing: border-box;
+        margin: auto;
+        max-width: 1160px;
+        padding: 60px 40px 0px;
+        width: 100%;
+    }
+        
+    &__heading {
+        color: $color-gray-1;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+        
+    &__text {
+        color: $color-gray-1;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
+    .system {
+        
+        &-container{
+            padding: 60px 10px 0px;  
+        }
+    }
+}

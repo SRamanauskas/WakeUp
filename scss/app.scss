@@ -1,0 +1,57 @@
+@import "settings/settings"; // Setting from foundation package
+
+@import "core/variables";
+
+@import "global/button";
+@import "global/form";
+@import "global/modal";
+@import "global/table";
+
+@import "layout/header";
+@import "layout/main";
+@import "layout/system";
+@import "layout/obstacles";
+@import "layout/partners";
+@import "layout/map";
+@import "layout/footer";
+@import "layout/contacts";
+
+
+@import "modules/top-bar";
+
+body {
+    background-color: $color-gray-1;
+    font-family: $font-family;
+    -ms-overflow-style: none;
+    overflow: auto;
+    h1,
+    .heading1 {
+        padding: 0;
+        margin: 0; 
+    }
+    h2,
+    .heading2 {
+        padding: 0;
+        margin: 0; 
+    }
+    .noscript-message {
+        background-color: #fff1bb;
+        font-size: 16px;
+        padding: 3px;
+        text-align: center;
+        z-index: 99;
+    }
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+    display: block; 
+}

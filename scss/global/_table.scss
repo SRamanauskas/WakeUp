@@ -1,0 +1,93 @@
+.main-prices {
+    background-color: $color-gray-1;
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 0px 20px;
+
+    &__container {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        display: table;
+    }
+    
+    &__table {
+        background-color: $color-white-1;
+        border: solid 1px #cacaca;
+        width: 45%;
+        max-width: 440px;
+        text-align: center;
+        list-style-type: none;
+        margin: 0px 10px 20px;
+        display: inline-block;
+        
+        &:nth-of-type(3) {
+            display: block;
+            margin: auto;
+        }
+    }
+    
+    li {
+        border-bottom: dotted 1px #cacaca;
+        font-size: 18px;
+        font-weight: 500;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__title {
+        background-color: $color-gray-1;
+        color: $color-white-1;
+        border-bottom: 0;
+        padding: 15px 0px;
+    }
+
+    &__price {
+        background-color: $color-gray-3;
+        border-bottom: 0;
+        padding: 0px;
+        color: #FF0000;
+    }
+
+    &__service {
+        color: $color-gray-1;
+        padding: 10px 0px;
+    }
+    
+    &__text-section {
+        color: $color-white-1;
+        max-width: 740px;
+        margin: 30px auto 0px;
+        padding: 0px 20px;
+    }
+    
+    &__header {
+        font-size: 35px;
+    }
+    
+    &__text {
+        font-size: 15px;
+        padding: 10px 0px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    
+    .main-prices { 
+        
+        &__table {
+            display: block;
+            margin:  0px auto 20px;
+            width: 90%;
+        }
+    }   
+}
+
+@media screen and (max-width: 680px) {
+    
+    .main-prices {
+        padding-top: 100px;
+    }
+}
