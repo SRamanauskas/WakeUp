@@ -1,2 +1,0 @@
-# WakeUp
-Example of project
